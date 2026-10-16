@@ -13,14 +13,12 @@ int main() {
     while (1) {
         printf("escolha um lugar para chutar (1, 2, 3 ,4, 5): ");
         scanf("%d", &escolha);
-
-        // MUDANÇA 1: Passou a ser o primeiro "if" para o continue funcionar sem erros
         if (escolha != 1) {
             printf("Invalido, digite apenas um numero entre 1 e 5\n");
             scanf("%*s");
             continue;
         }
-        else if (escolha == numero) { // Virou else if
+        else if (escolha == numero) { 
             printf("Gol!\n");
         }
         else {
@@ -33,7 +31,7 @@ int main() {
             printf("Programa encerrado, obrigado por jogar!\n");
             return 0;
         } else {
-            // MUDANÇA 2: Sorteia um novo número se ele responder 's'
+   
             numero = (rand() % 5) + 1;
         }
     }
